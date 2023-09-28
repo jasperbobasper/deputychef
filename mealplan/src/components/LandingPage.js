@@ -57,7 +57,7 @@ const LandingPage = () => {
                 <Box sx={{display: "flex", justifyContent: "center"}}>
                 <MobileStepper
                     variant="dots"
-                    steps={6}
+                    steps={intros.length}
                     position="static"
                     activeStep={index}
                     sx={{ maxWidth: 400, flexGrow: 1, bgcolor: "background.main" }}
@@ -65,14 +65,14 @@ const LandingPage = () => {
                         <IconButton size="small" onClick={() => setIndex((prevIndex) => 
                             prevIndex === intros.length - 1 ? 0 : prevIndex + 1
                         )}>
-                            <KeyboardArrowLeft />
+                            <KeyboardArrowRight />
                         </IconButton>
                     }
                     backButton={
                         <IconButton size="small" onClick={() => setIndex((prevIndex) => 
                             prevIndex === 0 ? intros.length - 1 : prevIndex - 1
                         )}>
-                            <KeyboardArrowRight />
+                            <KeyboardArrowLeft />
                         </IconButton>
                     }
                     />
