@@ -53,8 +53,7 @@ const SignUp = () => {
     <div>
         <FontText 
         size="80px" 
-        font="smokum" 
-        color="background.main">
+        font="smokum">
             SIGN UP
         </FontText>
         <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>

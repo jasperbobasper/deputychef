@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import cowboy from "../assets/cowboy.png";
-import { Container, Grid, Stack, Typography, Button, IconButton} from "@mui/material";
+import { Typography, Button, IconButton} from "@mui/material";
 import Box from '@mui/material/Box';
-import SVGFontButton from "./SVGFontButton";
-import {ReactComponent as Lasso} from "../assets/logos/lasso.svg";
 import { useNavigate } from "react-router-dom";
 import FontText from "./FontText";
 import MobileStepper from '@mui/material/MobileStepper';
@@ -23,7 +21,6 @@ const delay = 6000;
 
 const LandingPage = () => {
     const navigate= useNavigate();
-    const theme = useTheme();
     const [index, setIndex] = useState(0);
     const timeoutRef = React.useRef(null);
 
@@ -68,22 +65,14 @@ const LandingPage = () => {
                         <IconButton size="small" onClick={() => setIndex((prevIndex) => 
                             prevIndex === intros.length - 1 ? 0 : prevIndex + 1
                         )}>
-                        {theme.direction === 'rtl' ? (
                             <KeyboardArrowLeft />
-                        ) : (
-                            <KeyboardArrowRight />
-                        )}
                         </IconButton>
                     }
                     backButton={
                         <IconButton size="small" onClick={() => setIndex((prevIndex) => 
                             prevIndex === 0 ? intros.length - 1 : prevIndex - 1
                         )}>
-                        {theme.direction === 'rtl' ? (
                             <KeyboardArrowRight />
-                        ) : (
-                            <KeyboardArrowLeft />
-                        )}
                         </IconButton>
                     }
                     />
