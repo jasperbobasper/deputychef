@@ -40,7 +40,7 @@ const SignUp = () => {
             })
             newMealPlan()
             .catch((error) => alert(error));
-            navigate("/signin")
+            navigate("/")
         })
         .catch((error) => {
             const errorCode = error.code;

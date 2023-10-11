@@ -74,6 +74,7 @@ const AddRecipePage = (props) => {
             <EditRecipePage 
               recipes={props.recipes} 
               setrecipes={props.recipeProps} 
+              callbackLoading={props.callbackLoading}
               recipeProps={recipeData}/>
         )
     }
