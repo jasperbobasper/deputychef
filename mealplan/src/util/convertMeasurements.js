@@ -4,7 +4,7 @@ const convertMeasurementsImperial = (ingredient) => {
     var newAmt = ingredient.quantity;
     var minQty;
     var maxQty;
-    if (!newAmt ||newAmt.isNaN()) {
+    if (!newAmt || isNaN(newAmt)) {
         minQty = ingredient?.minQty;
         maxQty = ingredient?.maxQty;
     }
@@ -88,7 +88,7 @@ const convertMeasurementsMetric = (ingredient) => {
     var newAmt = ingredient.quantity;
     var minQty;
     var maxQty;
-    if (!newAmt || newAmt.isNaN()) {
+    if (!newAmt || isNaN(newAmt)) {
         minQty = ingredient?.minQty;
         maxQty = ingredient?.maxQty;
     }

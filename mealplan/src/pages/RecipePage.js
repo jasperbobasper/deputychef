@@ -125,7 +125,7 @@ export default function RecipePage(props) {
                         }}>
                     {ingredientList && ingredientList.map((ingredient, index) => (
                          <ListItem key={index} disablePadding>
-                            {ingredient?.quantity && !ingredient.quantity.isNaN() ? ingredient.quantity : 
+                            {ingredient?.quantity && !isNaN(ingredient.quantity) ? ingredient.quantity : 
                             (ingredient?.minQty ? `${ingredient.minQty} - ${ingredient.maxQty}` : "")} {ingredient.symbol ? 
                             ingredient.symbol : (ingredient.quantity !== 1 ? 
                             ingredient.unitPlural : ingredient.unit)} {ingredient.ingredient}

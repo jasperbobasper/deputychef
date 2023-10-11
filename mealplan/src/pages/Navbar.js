@@ -63,7 +63,7 @@ export default function Navbar({children, disabled}) {
         <ElevationScroll {...children}>
         <AppBar color="secondary">
             <Toolbar>
-            <IconButton
+            {/* <IconButton
                 size="large"
                 edge="start"
                 color="inherit"
@@ -71,7 +71,7 @@ export default function Navbar({children, disabled}) {
                 sx={{ mr: 2 }}
             >
                 <MenuIcon />
-            </IconButton>
+            </IconButton> */}
             <Box alignItems="center" sx={{ flexGrow: 1, display: "flex", justifyContent: "center"}}>
               <SVGFontButton
                 disabled={disabled}
