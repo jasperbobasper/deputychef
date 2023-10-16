@@ -6,8 +6,6 @@ import { signOut } from 'firebase/auth';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
@@ -63,15 +61,6 @@ export default function Navbar({children, disabled}) {
         <ElevationScroll {...children}>
         <AppBar color="secondary">
             <Toolbar>
-            {/* <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="open drawer"
-                sx={{ mr: 2 }}
-            >
-                <MenuIcon />
-            </IconButton> */}
             <Box alignItems="center" sx={{ flexGrow: 1, display: "flex", justifyContent: "center"}}>
               <SVGFontButton
                 disabled={disabled}

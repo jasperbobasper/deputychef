@@ -48,14 +48,12 @@ function App() {
               ...snap.data(),
               uid: user.uid,
             });
-            console.log("update");
           })
           .catch((error) => {
             console.log(error);
           });
         } else {
           setLoading(false);
-          console.log("user is logged out")
           setAuthUser(null);
           setUser(null);
         }
@@ -68,7 +66,6 @@ function App() {
         fetchUserRecipes(authUser.uid)
           .then((res) => setRecipes(res))
           .catch((e) => console.log(e));
-          console.log("fetch");
         fetchMealPlan(authUser.uid)
           .then((res) => setMealPlan(res))
           .catch((e) => console.log(e));

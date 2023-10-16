@@ -5,7 +5,7 @@ import mealPlanID from "./mealPlanID";
 const newMealPlan = async () => {
     const planID = mealPlanID();
 
-    const mealPlan = await setDoc(doc(db, "users", auth.currentUser.uid, "mealPlans", planID), {
+    await setDoc(doc(db, "users", auth.currentUser.uid, "mealPlans", planID), {
         Monday: {lunch: [], dinner: []},
         Tuesday: {lunch: [], dinner: []},
         Wednesday: {lunch: [], dinner: []},
@@ -14,7 +14,7 @@ const newMealPlan = async () => {
         Saturday: {lunch: [], dinner: []}, 
         Sunday: {lunch: [], dinner: []},
     })
-    return mealPlan;
+    return planID;
 }
 
 export default newMealPlan;

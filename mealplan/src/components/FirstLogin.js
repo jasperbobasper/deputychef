@@ -50,6 +50,7 @@ const FirstLogin = ({user, setUser}) => {
                 ...user,
                 update,
             })
+            window.location.reload(false);
         } catch (error) {
             alert(error);
         }

@@ -23,14 +23,12 @@ export default async function submitRecipe(recipeData, user, recID) {
         ingredientNames.push(trimmedIngredient);
       });
 
-    console.log(ingredientNames);
     const updateRecipe = {
         ...recipeData,
         ingredients: ingredientNames,
         ingredientList: ingredientList,
         dateAdded: serverTimestamp(),
     }
-    console.log(updateRecipe);
     console.log(recID);
     const recipeRef = doc(db, "users", user.uid, "recipes", recID);
     const tags = [];

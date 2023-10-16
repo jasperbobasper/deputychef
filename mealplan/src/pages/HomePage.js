@@ -3,7 +3,6 @@ import userContext from "../util/userContext";
 
 import DayPanel from "../components/DayPanel";
 import { Box } from "@mui/material";
-import LoadingPage from "./LoadingPage";
 import Cowboy from "../components/Cowboy";
 import FirstLogin from "../components/FirstLogin";
 import DateFormatted from "../util/getDates";
@@ -12,11 +11,9 @@ const HomePage = (props) => {
     const user = useContext(userContext);
     const d = new DateFormatted();
 
+    // If user is logging in for the first time, return intro 
     if (user.firstLogin === true) {
         return <FirstLogin user={user} setUser={props.setUser}/>
-    }
-    if (!props.mealPlan) {
-        return <LoadingPage/>
     }
     return (
         <Box sx={{ mt: 10, width: "60%"}}>

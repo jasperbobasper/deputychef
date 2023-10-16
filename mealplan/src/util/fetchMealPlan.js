@@ -9,10 +9,11 @@ export default async function fetchMealPlan(userID) {
     try {
         let mealPlan;
         const mealSnap = await getDoc(userMealPlan);
-        if (mealSnap.data()) {
+        if (mealSnap?.data()) {
             mealPlan = mealSnap.data();
         } else {
-            const mealPlanData = await newMealPlan();
+            const planID = await newMealPlan();
+            const mealPlanData = await getDoc(doc(db, "users", userID, "mealPlans", planID));
             mealPlan = mealPlanData.data();
         }
         return (mealPlan);
