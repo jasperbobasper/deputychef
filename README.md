@@ -1,6 +1,7 @@
 # Deputy Chef - A rootin' tootin' Meal Planning Site 
 
 <b>⚠️This site is still in development and there are some minor security issues.⚠️</b>
+Unfortunately development is currently on hold due to my Job, I hope to resume as soon as possible!
 
 It is currently not supported on Mobile devices or Microsoft Edge. 
 
